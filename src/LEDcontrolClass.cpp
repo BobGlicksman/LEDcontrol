@@ -9,7 +9,7 @@
  * Author:  Bob Glicksma.
  * (c) 2026 by Bob Glicksman, Jim Schrempp, Team Practical Projects.  All rights reserved.
  *
- * Version 0.1.  Development
+ * Version 1.0. Initial release. 7/01/26
  *
  **************************************************************************************/
 

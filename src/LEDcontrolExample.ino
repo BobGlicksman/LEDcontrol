@@ -1,6 +1,21 @@
 /****************************************************************************************
  * LEDcontrolExample.ino.  Test code to exercize the LEDcontrolClass library.
  *
+ *  This code is provided as an example of how to use the LEDcontrolClass library.
+ *
+ *  The code creates three instances of the LEDcontrolClass, one for each of the three LEDs on
+ *  a Photon 2 that is placed on the TPP RFID pcb.  In setup(), the test code uses each LED
+ *  instance to turn on and off each LED for 2 seconds.  In loop(), the test code causes
+ *  each LED to flash at a different rate.  This demonstrates the library functionality when
+ *  controlling multiple LEDs.
+ *
+ *  The loop() code must be non-blocking as the refresh() method must be called frequently
+ *  to allow the LED flashing to occur accurately.
+ *
+ * Author: Bob Glicksman
+ * (c) 2026, Bob Glicksman, Jim Schrempp, Team Practical Projects.  All rights reserved.
+ *
+ * Version 1.0.  Initial release. 7/01/26
  *
  */
 
