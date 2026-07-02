@@ -5,7 +5,7 @@ that require visual and audible status and alarm indicators:
 
 ## LEDcontrolClass
 Instances of the class encapsulate an LED, buzzer, or any other device that can be turned on and
-off via digitalWrite().  The encapsulted device can be turned on, turned off and flashed via methods of the object.
+off via digitalWrite().  The encapsulted device can be turned on, turned off, and flashed via methods of the object.
 The state of objects of this class needs to be updated frequently by calling the refresh() method on the object.
 Therefore, refresh() should be called in loop() and loop() code should be non-blocking.
 
