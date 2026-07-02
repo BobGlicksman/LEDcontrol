@@ -25,7 +25,7 @@ Therefore, refresh() should be called in loop() and loop() code should be non-bl
     (i.e. in non-blocking loop() code).
 
 ## BtnStatusClass
-Instances of the class encapsulate an a momentary push button switch, or any other momentatry device whose status can be read
+Instances of the class encapsulate a momentary push button switch, or any other momentatry device whose status can be read
 via digitalRead().  Instances of this class maintain an internal state that also manages debouncing the button.  A 10 ms debounce
 internal is the default.  The isPressed() method is used to determine of the button has been pressed.  It returns true only once for
 each press of the button.  The state of objects of this class need to be updated frequently by calling the isPressed() method on the
