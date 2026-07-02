@@ -21,10 +21,12 @@
 
 #include <Particle.h>
 #include <LEDcontrolClass.h>
+#include <BtnStatusClass.h>
 
 #define RED S3    // pin to which the RED LED is connected
 #define GREEN D4  // pin to which the GREEN LED is connected
 #define YELLOW S4 // pin to which the YELLOW LED is connected
+#define BTN D16   // pin to which the resetbutton is connected
 
 SYSTEM_MODE(AUTOMATIC);
 
@@ -32,6 +34,7 @@ SYSTEM_MODE(AUTOMATIC);
 LEDcontrolClass redLED(RED);
 LEDcontrolClass greenLED(GREEN);
 LEDcontrolClass yellowLED(YELLOW);
+BtnStatusClass resetButton(BTN);
 
 void setup()
 {
@@ -39,6 +42,7 @@ void setup()
     redLED.begin();
     greenLED.begin();
     yellowLED.begin();
+    resetButton.begin();
 
     greenLED.setRate(100);
     yellowLED.setRate(200);
@@ -61,7 +65,7 @@ void setup()
     yellowLED.refresh(); // turn off the led
     redLED.on();
     redLED.refresh(); // turn on the led
-    delay(2000);      // wait 4 seconds
+    delay(2000);      // wait 2 seconds
 }
 
 void loop()
@@ -70,6 +74,10 @@ void loop()
     greenLED.flash();
     yellowLED.flash();
     redLED.flash();
+    if (resetButton.isPressed())
+    {
+        System.reset(); // reset the device if the reset button is pressed
+    }
 
     // call refresh() frequently to allow flashing to occur accurately
     greenLED.refresh();
